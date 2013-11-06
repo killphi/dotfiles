@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+files = ''
+specs = ARGV.inject({}) do |memo, file|
+  memo[file] = File.join 'spec', file.sub(/(\.rb)$/, '_spec\1')
+  memo
+end
+
+specs.each do |key, value|
+  files << "#{value} #{key} "
+end
+
+exec "vim -o #{files}"

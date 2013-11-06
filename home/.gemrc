@@ -1,0 +1,3 @@
+install: --no-document --conservative
+update: --no-document
+uninstall: --executables

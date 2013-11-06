@@ -1,0 +1,17 @@
+[user]
+	name = killphi
+	email = killphi@gmx.de
+[merge]
+	tool = splice
+[diff]
+	tool = vimdiff
+
+[mergetool "splice"]
+	cmd = "vim +SpliceInit \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\""
+	trustExitCode = true
+[push]
+	default = simple
+[core]
+	excludesfile = /home/user/.gitignore_global
+[url "https://"]
+	insteadOf = git://
