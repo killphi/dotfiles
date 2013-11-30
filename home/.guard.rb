@@ -8,10 +8,16 @@ notification :tmux,
              # the first %s will show the title, the second the message
              color_location:         'status-left-fg'
 
+def has_plugin?(name)
+  PluginUtil::plugin_names.include? name
+end
+
 begin
   require 'guardrc'
-  eval Guardrc.at '~/.guard/bundler.rb' if Guard::Bundler
-  eval Guardrc.at '~/.guard/rubocop.rb' if Guard::RuboCop
+  eval Guardrc.at '~/.guard/bundler.rb' if has_plugin? 'bundler'
+  eval Guardrc.at '~/.guard/rubocop.rb' if has_plugin? 'rubocop'
 rescue LoadError
   nil
 end
+
+interactor :off
