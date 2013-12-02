@@ -1,1 +1,1 @@
-/home/user/.local/bin/term
+../../.local/bin/term
