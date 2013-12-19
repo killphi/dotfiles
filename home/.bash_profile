@@ -16,7 +16,7 @@ export VISUAL EDITOR
 unset HISTFILE
 
 # git prompt
-. $HOME/Versioning/git/git-prompt/git-prompt.sh
+[[ $- =~ i ]] && . $HOME/Versioning/git/git-prompt/git-prompt.sh
 
 # local tools
 for i in ~/.local/tools/*/functions
