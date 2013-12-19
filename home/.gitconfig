@@ -1,17 +1,51 @@
 [user]
-	name = killphi
-	email = killphi@gmx.de
-[merge]
-	tool = splice
+  name = killphi
+
+  email = killphi@gmx.de
+
+
+[github]
+  user = killphi
+
+
 [diff]
-	tool = vimdiff
+  tool = vimdiff
+
+
+[merge]
+  conflictstyle = diff3
+
+  tool = splice
+
 
 [mergetool "splice"]
-	cmd = "vim +SpliceInit \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\""
-	trustExitCode = true
+  cmd = "vim +SpliceInit \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\""
+
+  trustExitCode = true
+
+
 [push]
-	default = simple
+  default = simple
+
+
 [core]
-	excludesfile = /home/user/.gitignore_global
+  excludesfile = /home/user/.gitignore_global
+
+  pager = less -R
+
+  whitespace = trailing-space,space-before-tab
+
+
+[rerere]
+  # Reuse recorded resolution of conflicted merges:
+  # - http://shop.oreilly.com/product/0636920024774.do
+  # - http://git-scm.com/2010/03/08/rerere.html
+  enabled = true
+
+
+[color]
+  ui = true
+
+
 [url "https://"]
-	insteadOf = git://
+  insteadOf = git://
