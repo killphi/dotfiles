@@ -6,3 +6,5 @@ AllCops:
     - Gemfile
     - '*rakelib/**.rake'
     - '*lib/tasks/**.rake'
+  Excludes:
+    - '*bin/**'
