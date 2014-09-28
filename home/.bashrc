@@ -15,4 +15,4 @@ if [[ ! $PATH =~ "$HOME/.local/bin:$HOME/bin" ]]; then
 fi
 
 PATH=$PATH:$HOME/node_modules/.bin
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
