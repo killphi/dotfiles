@@ -1,0 +1,12 @@
+[submodule "home/Versioning/.homesick-dep/powerline-fonts"]
+	path = home/Versioning/.homesick-dep/powerline-fonts
+	url = https://github.com/Lokaltog/powerline-fonts.git
+[submodule "home/Versioning/.homesick-dep/dircolors-solarized"]
+	path = home/Versioning/.homesick-dep/dircolors-solarized
+	url = https://github.com/seebi/dircolors-solarized.git
+[submodule "home/Versioning/.homesick-dep/tmux-colors-solarized"]
+	path = home/Versioning/.homesick-dep/tmux-colors-solarized
+	url = https://github.com/seebi/tmux-colors-solarized.git
+[submodule "home/Versioning/.homesick-dep/xresources"]
+	path = home/Versioning/.homesick-dep/xresources
+	url = https://github.com/solarized/xresources.git
