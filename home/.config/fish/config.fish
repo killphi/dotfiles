@@ -5,19 +5,17 @@ source /etc/fish/config.fish
 source ~/.config/fish/aliases.fish
 
 # set path
-# if status --is-login
-  if test -z (echo $PATH | grep $HOME/bin)
-    set -x PATH ~/bin $PATH
-  end
+if test -z (echo $PATH | grep $HOME/bin)
+  set -x PATH ~/bin $PATH
+end
 
-  if test -z (echo $PATH | grep $HOME/.local/bin)
-    set -x PATH ~/.local/bin $PATH
-  end
+if test -z (echo $PATH | grep $HOME/.local/bin)
+  set -x PATH ~/.local/bin $PATH
+end
 
-  if test -z (echo $PATH | grep $HOME/node_moduls/.bin)
-    set -x PATH $PATH ~/node_modules/.bin
-  end
-# end
+if test -z (echo $PATH | grep $HOME/node_moduls/.bin)
+  set -x PATH $PATH ~/node_modules/.bin
+end
 
 # VIm <3
 set -x VISUAL vim
