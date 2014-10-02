@@ -28,8 +28,7 @@ set -g fish_color_user green
 set -g fish_color_host cyan
 
 # dircolors
-# this is fucked up
-#set -x LS_COLORS (dircolors ~/.dir_colors | cut -d\n -f1 | sed -e 's/.*\'\(.*\)\'.*/\1/' -e 's/:/ /g')
+set -x LS_COLORS (dircolors .dir_colors | cut -d\n -f1 | sed -e 's/.*\'\(.*\)\'.*/\1/')
 
 # call rvm once, to set up env
 rvm ^&1 >/dev/null
