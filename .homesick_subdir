@@ -1,7 +1,4 @@
 .local
-.config
-.config/fish
-.config/fish/functions
 bin
 .kde/Autostart
 Versioning
