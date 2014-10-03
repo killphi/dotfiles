@@ -18,11 +18,6 @@ unset HISTFILE
 # git prompt
 [[ $- =~ i ]] && . $HOME/Versioning/git/git-prompt/git-prompt.sh
 
-# local tools
-for i in ~/.local/tools/*/functions
-  do . $i
-done
-
 eval `dircolors ~/.dir_colors`
 
 
