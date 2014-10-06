@@ -1,53 +1,53 @@
 [user]
-  name = killphi
+	name = killphi
 
-  email = killphi@gmx.de
+	email = killphi+git@gmail.com
 
 
 [github]
-  user = killphi
+	user = killphi
 
 
 [diff]
-  tool = vimdiff
+	tool = vimdiff
 
 
 [merge]
-  conflictstyle = diff3
+	conflictstyle = diff3
 
-  tool = splice
+	tool = splice
 
 
 [mergetool "splice"]
-  cmd = "vim +SpliceInit \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\""
+	cmd = "vim +SpliceInit \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\""
 
-  trustExitCode = true
+	trustExitCode = true
 
 
 [push]
-  default = simple
+	default = simple
 
 
 [core]
-  excludesfile = /home/user/.gitignore_global
+	excludesfile = /home/user/.gitignore_global
 
-  pager = less -R
+	pager = less -R
 
-  whitespace = trailing-space,space-before-tab
+	whitespace = trailing-space,space-before-tab
 
 
 [rerere]
-  # Reuse recorded resolution of conflicted merges:
-  # - http://shop.oreilly.com/product/0636920024774.do
-  # - http://git-scm.com/2010/03/08/rerere.html
-  enabled = true
+	# Reuse recorded resolution of conflicted merges:
+	# - http://shop.oreilly.com/product/0636920024774.do
+	# - http://git-scm.com/2010/03/08/rerere.html
+	enabled = true
 
 
 [color]
-  ui = true
+	ui = true
 
 
 [url "https://"]
-  insteadOf = git://
+	insteadOf = git://
 [branch]
 	autosetuprebase = always

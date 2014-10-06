@@ -1,5 +1,5 @@
 URxvt*termName: rxvt-unicode-256color
-URxvt*font: xft:Liberation Mono for Powerline:pixelsize=14:antialias=true:hinting=true
+URxvt*font: xft:Liberation Mono for Powerline:pixelsize=13:antialias=true:hinting=true
 URxvt*jumpScroll: False
 URxvt*skipScroll: True
 URxvt*transparent: False
