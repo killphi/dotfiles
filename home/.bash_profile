@@ -16,7 +16,7 @@ export VISUAL EDITOR
 unset HISTFILE
 
 # git prompt
-[[ $- =~ i ]] && . $HOME/Versioning/git/git-prompt/git-prompt.sh
+[[ $- =~ i ]] && . $HOME/Versioning/.homesick-dep/git-prompt/git-prompt.sh
 
 eval `dircolors ~/.dir_colors`
 

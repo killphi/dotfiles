@@ -10,3 +10,6 @@
 [submodule "home/Versioning/.homesick-dep/xresources"]
 	path = home/Versioning/.homesick-dep/xresources
 	url = https://github.com/solarized/xresources.git
+[submodule "home/Versioning/.homesick-dep/git-prompt"]
+	path = home/Versioning/.homesick-dep/git-prompt
+	url = https://github.com/lvv/git-prompt
