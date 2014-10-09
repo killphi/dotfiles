@@ -1,6 +1,7 @@
-.local
-.local/tools
-.local/bin
 bin
+.config
 .kde/Autostart
+.local
+.local/bin
+.local/tools
 Versioning
