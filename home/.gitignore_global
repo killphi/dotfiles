@@ -1,16 +1,20 @@
-tags
-cscope*
+### https://github.com/github/gitignore
 
-
-### from github/gitignore global
-
-# Vagrant
-.vagrant/
-
-# Vim
+## Global/vim.gitignore
 [._]*.s[a-w][a-z]
 [._]s[a-w][a-z]
 *.un~
 Session.vim
 .netrwhist
 *~
+
+
+## Global/Linux.gitignore
+*~
+
+# KDE directory preferences
+.directory
+
+
+## Global/Vagrant.gitignore
+.vagrant/
