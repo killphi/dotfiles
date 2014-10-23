@@ -9,10 +9,17 @@ fi
 [[ -f ~/.bash_functions ]] && . ~/.bash_functions
 [[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
 
-# Bundles first, then ~/bin, then ~/.local/bin, then global PATH
-if [[ ! $PATH =~ "$HOME/.local/bin:$HOME/bin" ]]; then
-  PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+# PATH modifications
+if [[ ! $PATH =~ "$HOME/node_modules/.bin" ]]; then
+  PATH=$HOME/node_modules/.bin:$PATH
 fi
 
-PATH=$PATH:$HOME/node_modules/.bin
+if [[ ! $PATH =~ "$HOME/bin" ]]; then
+  PATH=$HOME/bin:$PATH
+fi
+
+if [[ ! $PATH =~ "$HOME/.local/bin" ]]; then
+  PATH=$HOME/.local/bin:$PATH
+fi
+
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
