@@ -1,12 +1,6 @@
 # .bash_functions
 
 cw(){
-  # go to home dir
-  cd
-
-  # reset rvm env
-  rvm use default
-
   for i in {1..2000}; do
     echo
   done
