@@ -23,6 +23,11 @@
 
 	trustExitCode = true
 
+[mergetool]
+	prompt = false
+
+	keepBackup = false
+
 
 [push]
 	default = simple
