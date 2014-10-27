@@ -10,4 +10,4 @@ specs.each do |key, value|
   files << "#{value} #{key} "
 end
 
-exec "vim -o #{files}"
+exec "vim -O #{files}"

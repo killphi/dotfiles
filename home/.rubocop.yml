@@ -10,15 +10,12 @@ Style/SpaceInsideBlockBraces:
   SpaceBeforeBlockParameters: false
 
 
-## enable all Cops
+## enable more Cops
 
 Style/CollectionMethods:
   Enabled: true
 
 Style/Encoding:
-  Enabled: true
-
-Style/InlineComment:
   Enabled: true
 
 Style/MethodCalledOnDoEndBlock:
