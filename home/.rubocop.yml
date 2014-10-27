@@ -1,10 +1,16 @@
 AllCops:
-  Includes:
+  Include:
     - config.ru
-    - Rakefile
-    - Guardfile
-    - Gemfile
-    - '*rakelib/**.rake'
-    - '*lib/tasks/**.rake'
-  Excludes:
-    - '*bin/**'
+    - 'rakelib/**/*.rake'
+    - 'lib/tasks/**/*.rake'
+  Exclude:
+    - 'bin/**/*'
+
+Style/AlignHash:
+  EnforcedHashRocketStyle: table
+
+Style/SpaceInsideBlockBraces:
+  SpaceBeforeBlockParameters: false
+
+Style/TrailingBlankLines:
+  EnforcedStyle: final_newline

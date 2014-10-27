@@ -1,3 +1,8 @@
+# cadre
+errors.err
+.cadre/
+
+
 ### https://github.com/github/gitignore
 
 ## Global/vim.gitignore
