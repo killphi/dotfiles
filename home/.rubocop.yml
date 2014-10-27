@@ -1,16 +1,28 @@
-AllCops:
-  Include:
-    - config.ru
-    - 'rakelib/**/*.rake'
-    - 'lib/tasks/**/*.rake'
-  Exclude:
-    - 'bin/**/*'
+## enforce personal preferences
 
+# a  => b
+# aa => b
 Style/AlignHash:
   EnforcedHashRocketStyle: table
 
+# block {|x| do_something_with x }
 Style/SpaceInsideBlockBraces:
   SpaceBeforeBlockParameters: false
 
-Style/TrailingBlankLines:
-  EnforcedStyle: final_newline
+
+## enable all Cops
+
+Style/CollectionMethods:
+  Enabled: true
+
+Style/Encoding:
+  Enabled: true
+
+Style/InlineComment:
+  Enabled: true
+
+Style/MethodCalledOnDoEndBlock:
+  Enabled: true
+
+Style/SymbolArray:
+  Enabled: true
