@@ -1,3 +1,10 @@
+## excludes for filename checks
+
+Style/FileName:
+  Exclude:
+    - .guard.rb
+
+
 ## enforce personal preferences
 
 # a  => b

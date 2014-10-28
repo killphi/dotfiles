@@ -1,3 +1,3 @@
-install: --no-document --conservative
-update: --no-document
+install: --document rdoc,yard,ri --conservative --minimal-deps
+update: --document rdoc,yard,ri
 uninstall: --executables
