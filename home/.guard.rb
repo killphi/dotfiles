@@ -20,7 +20,6 @@ if plugin? 'bundler'
 end
 
 if plugin? 'rspec'
-  RSPEC_TURNIP    = plugin? 'turnip', false
   RSPEC_CMD     ||= 'bundle exec rspec'
   RSPEC_ALL     ||= 'spec'
   RSPEC_ARGS    ||= [
@@ -42,42 +41,17 @@ if plugin? 'rspec'
                 RSPEC_ARGS)
     }
   }
-  TURNIP              ||= 'spec/acceptance'
-  TURNIP_ALL_FEATURES ||= "#{TURNIP}/features"
 
   def spec(name)
-    Dir["#{RSPEC_ALL}/**/#{name}_spec.rb"][0]
-  end
-
-  def turnip(name)
-    Dir["#{TURNIP_ALL_FEATURES}/**/#{name}.feature"][0]
-  end
-
-  def path(match)
-    current_spec = spec match[1]
-
-    if RSPEC_TURNIP
-      current_feature = turnip match[1]
-      [current_feature, current_spec].reject(&:nil?)
-    else
-      current_spec
-    end
+    Dir["#{RSPEC_ALL}/**/#{name}_spec.rb"][0] || RSPEC_ALL
   end
 
   guard :rspec, RSPEC_OPTIONS do
-    watch(/^lib\/(.+)\.rb$/)                      {|m| path m }
+    watch(/^lib\/(.+)\.rb$/)     {|m| spec m[1] }
 
     # RSpec specs
     watch(/^spec\/.+_spec\.rb$/)
-    watch('spec/spec_helper.rb')                  { RSPEC_ALL }
-
-    # Turnip features and steps
-    if RSPEC_TURNIP
-      watch(%r{^#{TURNIP}/features/.+\.feature$})
-      watch(%r{^#{TURNIP}/steps/(.+)_steps\.rb$}) {|m| turnip m[1] }
-      watch(%r{^#{TURNIP}/helpers/.+\.rb$})       { TURNIP_ALL_FEATURES }
-      watch('spec/turnip_helper.rb')              { TURNIP_ALL_FEATURES }
-    end
+    watch('spec/spec_helper.rb') { RSPEC_ALL }
   end
 end
 
@@ -89,14 +63,14 @@ if plugin? 'cucumber'
     cli:            '--profile guard'
   }
 
-  def cucumber(name)
+  def feature(name)
     Dir["#{CUCUMBER_ALL}/**/#{name}.feature"][0] || CUCUMBER_ALL
   end
 
   guard :cucumber, CUCUMBER_OPTIONS do
     watch(/^features\/.+\.feature$/)
     watch(%r{^features/support/.+$})                      { CUCUMBER_ALL }
-    watch(%r{^features/step_definitions/(.+)_steps\.rb$}) {|m| cucumber m[1] }
+    watch(%r{^features/step_definitions/(.+)_steps\.rb$}) {|m| feature m[1] }
   end
 end
 
