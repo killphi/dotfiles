@@ -4,4 +4,5 @@ bin
 .local
 .local/bin
 .local/tools
+.lpass
 Versioning
