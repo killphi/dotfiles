@@ -1,10 +1,6 @@
 root = true
 
 [*]
-# twospace for life!
-indent_style = space
-indent_size = 2
-
 # sane defaults
 end_of_line = lf
 charset = utf-8
