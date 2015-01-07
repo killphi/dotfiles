@@ -22,4 +22,5 @@ if [[ ! $PATH =~ "$HOME/.local/bin" ]]; then
   PATH=$HOME/.local/bin:$PATH
 fi
 
+# RVM line
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
