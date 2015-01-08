@@ -1,6 +1,6 @@
 bin
 .config
-.kde/Autostart
+.config/autostart
 .local
 .local/bin
 .local/tools
