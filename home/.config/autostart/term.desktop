@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=term.sh
+Comment=my term session
+GenericName=killphi's URxvt TMux session
+Exec=term
+Icon=utilities-terminal
+StartupNotify=false
+Terminal=false
+Type=Application
