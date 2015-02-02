@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 
-# enter home directory
-cd
-
-TMUX=exec urxvt256c-ml -C -e tmux -2 attach -t standard &
+urxvt256c-ml -C -cd ~ -e tmux -2 attach -t standard &
 
 while [[ -z `wmctrl -l | grep tmux` ]]
 do

@@ -1,9 +1,9 @@
 #!/usr/bin/env xdg-open
 [Desktop Entry]
-Name=term.sh
+Name=term
 Comment=my term session
 GenericName=killphi's URxvt TMux session
-Exec=term
+Exec=fish -c term
 Icon=utilities-terminal
 StartupNotify=false
 Terminal=false
