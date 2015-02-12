@@ -19,7 +19,3 @@ unset HISTFILE
 [[ $- =~ i ]] && . $HOME/Versioning/.homesick-dep/git-prompt/git-prompt.sh
 
 eval `dircolors ~/.dir_colors`
-
-
-# RVM line
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
