@@ -2,6 +2,7 @@
 	name = killphi
 
 	email = killphi+git@gmail.com
+	signingkey = 0CD077C2
 
 
 [github]
