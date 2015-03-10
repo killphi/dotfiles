@@ -1,5 +1,3 @@
-# -*- coding:utf-8 -*-
-
 def plugin?(name, guard = true)
   if guard
     PluginUtil.plugin_names.include? name
