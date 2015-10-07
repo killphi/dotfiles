@@ -1,6 +1,6 @@
 ! urxvt settings
 URxvt*termName: rxvt-unicode-256color
-URxvt*font: xft:Liberation Mono for Powerline:pixelsize=13:antialias=true:hinting=true
+URxvt*font: xft:Anonymous Pro for Powerline:pixelsize=17:antialias=true:hinting=false
 URxvt*jumpScroll: False
 URxvt*skipScroll: True
 URxvt*transparent: False
