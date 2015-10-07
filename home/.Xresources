@@ -13,4 +13,4 @@ URxvt*iso14755_52: False
 URxvt*saveLines: 0
 
 ! colors
-#include "~/Versioning/.homesick-dep/xresources/Xresources.dark"
+#include "Versioning/.homesick-dep/xresources/Xresources.dark"
