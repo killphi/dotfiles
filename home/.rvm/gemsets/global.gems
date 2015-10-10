@@ -1,0 +1,17 @@
+gem-wrappers
+rubygems-bundler
+rake
+rvm
+
+rubygems-update
+guard
+pry
+pry-byebug
+cadre
+debugger-linecache
+git-bump
+overcommit
+rails
+rspec
+rubocop
+travis

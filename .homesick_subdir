@@ -6,3 +6,4 @@ bin
 .local/tools
 .lpass
 Versioning
+.rvm/gemsets
