@@ -18,12 +18,15 @@ if plugin? 'bundler'
 end
 
 if plugin? 'rspec'
-  RSPEC_CMD     ||= 'bundle exec rspec'
-  RSPEC_ALL     ||= 'spec'
-  RSPEC_ARGS    ||= [
+  RSPEC_CMD ||= 'bundle exec rspec'
+
+  RSPEC_ALL ||= 'spec'
+
+  RSPEC_ARGS ||= [
     '--format html',
     '-o spec/reports/rspec.html'
   ]
+
   RSPEC_OPTIONS ||= {
     all_on_start:   false,
     all_after_pass: true,
@@ -45,16 +48,15 @@ if plugin? 'rspec'
   end
 
   guard :rspec, RSPEC_OPTIONS do
-    watch(/^lib\/(.+)\.rb$/)     {|m| spec m[1] }
-
-    # RSpec specs
-    watch(/^spec\/.+_spec\.rb$/)
+    watch(%r{^spec\/.+_spec\.rb$})
+    watch(%r{^lib\/(.+)\.rb$})   {|m| spec m[1] }
     watch('spec/spec_helper.rb') { RSPEC_ALL }
   end
 end
 
 if plugin? 'cucumber'
-  CUCUMBER_ALL     ||= 'features'
+  CUCUMBER_ALL ||= 'features'
+
   CUCUMBER_OPTIONS ||= {
     all_on_start:   false,
     all_after_pass: true,
@@ -66,9 +68,9 @@ if plugin? 'cucumber'
   end
 
   guard :cucumber, CUCUMBER_OPTIONS do
-    watch(/^features\/.+\.feature$/)
-    watch(%r{^features/support/.+$})                      { CUCUMBER_ALL }
+    watch(%r{^features\/.+\.feature$})
     watch(%r{^features/step_definitions/(.+)_steps\.rb$}) {|m| feature m[1] }
+    watch(%r{^features/support/.+$})                      { CUCUMBER_ALL }
   end
 end
 
