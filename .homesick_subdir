@@ -1,9 +1,10 @@
 bin
 .config
 .config/autostart
+.fonts
 .local
 .local/bin
 .local/tools
 .lpass
-Versioning
 .rvm/gemsets
+Versioning
