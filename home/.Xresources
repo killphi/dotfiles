@@ -1,9 +1,11 @@
 ! urxvt settings
 URxvt*termName: rxvt-unicode-256color
 URxvt*font: xft:Anonymous Pro for Powerline:pixelsize=17:antialias=true:hinting=false
-URxvt*jumpScroll: False
+URxvt*buffered: True
+URxvt*jumpScroll: True
 URxvt*skipScroll: True
 URxvt*transparent: False
+URxvt*borderless: True
 URxvt*loginShell: True
 URxvt*scrollBar: False
 URxvt*secondaryScreen: False
