@@ -12,6 +12,7 @@ errors.err
 Session.vim
 .netrwhist
 *~
+.vimtags
 
 
 ## Global/Linux.gitignore
